@@ -3,7 +3,6 @@ import { useState } from 'react'
 import Inputs from './Inputs'
 import MapSpot from './MapSpot'
 import Selectors from './Selectors'
-import useWindowDimensions from './windowDimensions'
 
 const App = () => {
   const [rows,setRows] = useState(10)
@@ -89,7 +88,7 @@ const App = () => {
         seen.add(toAdd);
         if(curr[0] === end[0] && curr[1] === end[1]) {
           var newMap = [...map]
-          var curr = path[end[0]][end[1]]
+          curr = path[end[0]][end[1]]
           while(curr[0] !== start[0] || curr[1] !== start[1]) {
             newMap[curr[0]][curr[1]] = 4
             curr = path[curr[0]][curr[1]]
@@ -154,10 +153,7 @@ const App = () => {
               }
             }
           }
-          // console.log(newMap)
-          // newMap.map(row => row.map(spot => spot === 4 ? 0 : spot))
-          // console.log(newMap)
-          var curr = path[en[0]][en[1]]
+          curr = path[en[0]][en[1]]
           while(curr[0] !== st[0] || curr[1] !== st[1]) {
             newMap[curr[0]][curr[1]] = 4
             curr = path[curr[0]][curr[1]]
@@ -184,7 +180,7 @@ const App = () => {
           path[curr[0]][curr[1]+1] = curr
         }
       }
-      var newMap = [...map]
+      newMap = [...map]
       for(let row=0; row<rows; row++) {
         for(let col=0; col<cols; col++) {
           if(newMap[row][col] === 4) {
@@ -195,7 +191,6 @@ const App = () => {
     setMap(newMap)
   }
   const [selected,setSelected] = useState(0);
-  const { height, width } = useWindowDimensions();
   const onSpotClick = (row,col) => {
     var newStart = null;
     var newEnd = null;
