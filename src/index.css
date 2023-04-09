@@ -5,9 +5,125 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+h3 {
+  font-size: 26px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 6px;
+}
+
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+.map-row {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.map-spot {
+  border: black solid 1px;
+}
+
+.selectors-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selector {
+  color: white;
+  cursor: default;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  column-gap: 15px;
+}
+
+.solve-btn {
+  background-color: rgb(101, 212, 99);
+  border: none;
+  outline: none;
+  color: white;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.solve-btn:hover {
+  background-color: rgb(81, 148, 80);
+}
+
+.reset-btn {
+  background-color: rgb(203, 62, 62);
+  border: none;
+  outline: none;
+  color: white;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.reset-btn:hover {
+  background-color: rgb(147, 39, 39);
+}
+
+.random-btn {
+  border: none;
+  outline: none;
+  color: white;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, rgb(223, 109, 109),rgb(233, 177, 74),rgb(237, 237, 92),rgb(110, 236, 110),rgb(93, 93, 237),rgb(159, 89, 209),violet);
+}
+
+.random-btn:hover {
+  background-image: linear-gradient(to right, rgb(180, 88, 88),rgb(179, 135, 54),rgb(159, 159, 61),rgb(67, 151, 67),rgb(57, 57, 145),rgb(100, 55, 133),rgb(142, 75, 142));
+
+}
+
+.left {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.right {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
